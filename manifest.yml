@@ -1,0 +1,10 @@
+---
+applications:
+- name: rabbit-spring
+  memory: 1G
+  instances: 1
+  host: rabbitmq
+  path: target/rabbitmq-spring-1.0-SNAPSHOT.war
+  buildpack: java_buildpack_offline
+  env:
+    SPRING_PROFILES_DEFAULT: cloud
